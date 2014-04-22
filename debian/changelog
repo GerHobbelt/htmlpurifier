@@ -1,0 +1,11 @@
+kronos-php-htmlpurifier (4.5.1) experimental; urgency=low
+
+  * this is a new version with blank message change applied 
+
+ -- Simon Vigneux <svigneux@kronostechnologies.com>  Wed, 09 Apr 2014 13:07:42 -0400
+
+kronos-php-htmlpurifier (4.5.0) experimental; urgency=low
+
+  * Prepare for automatic builds.
+
+ -- Simon Vigneux <svigneux@kronostechnologies.com>  Fri, 29 Nov 2013 15:16:42 -0500

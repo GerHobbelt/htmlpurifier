@@ -1,0 +1,10 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kronos-php-htmlpurifier
+
+Files: *
+Copyright: (C) 2013 Htmlpurifier Project
+License: Lesser GPL
+File: /usr/share/common-licenses/LGPL-2.1
+
+License: Lesser GPL
+ Lesser GPL

@@ -1,0 +1,37 @@
+From ca547555e89f78e75624dc8a397fddc97a8ff0ca Mon Sep 17 00:00:00 2001
+From: Eric Durand-Tremblay <etremblay@kronostechnologies.com>
+Date: Mon, 7 Apr 2014 11:55:02 -0400
+Subject: [PATCH] Filter.ExtractStyleBlocks drop html content in presence of
+ empty <style> block
+
+---
+ library/HTMLPurifier/Filter/ExtractStyleBlocks.php |    6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/library/HTMLPurifier/Filter/ExtractStyleBlocks.php b/library/HTMLPurifier/Filter/ExtractStyleBlocks.php
+index df937ac..6a1ac36 100644
+--- a/library/HTMLPurifier/Filter/ExtractStyleBlocks.php
++++ b/library/HTMLPurifier/Filter/ExtractStyleBlocks.php
+@@ -44,7 +44,9 @@ class HTMLPurifier_Filter_ExtractStyleBlocks extends HTMLPurifier_Filter
+      * @param $matches preg_replace style $matches array
+      */
+     protected function styleCallback($matches) {
+-        $this->_styleMatches[] = $matches[1];
++        if($matches != ''){
++            $this->_styleMatches[] = $matches[1];
++        }
+     }
+ 
+     /**
+@@ -54,7 +56,7 @@ class HTMLPurifier_Filter_ExtractStyleBlocks extends HTMLPurifier_Filter
+     public function preFilter($html, $config, $context) {
+         $tidy = $config->get('Filter.ExtractStyleBlocks.TidyImpl');
+         if ($tidy !== null) $this->_tidy = $tidy;
+-        $html = preg_replace_callback('#<style(?:\s.*)?>(.+)</style>#isU', array($this, 'styleCallback'), $html);
++        $html = preg_replace_callback('#<style(?:\s.*)?>(.*)</style>#isU', array($this, 'styleCallback'), $html);
+         $style_blocks = $this->_styleMatches;
+         $this->_styleMatches = array(); // reset
+         $context->register('StyleBlocks', $style_blocks); // $context must not be reused
+-- 
+1.7.10.4
+

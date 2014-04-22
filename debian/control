@@ -1,0 +1,16 @@
+Source: kronos-php-htmlpurifier
+Section: non-free/misc
+Priority: optional
+Maintainer: System Administrator <sysadmin@kronostechnologies.com>
+Build-Depends: debhelper (>= 8.0.0), python
+Standards-Version: 3.9.4
+Vcs-Git: git://github.com/ezyang/htmlpurifier.git
+
+Package: kronos-php-htmlpurifier
+Architecture: all
+Depends: ${misc:Depends}, php5-common
+Description: Php Html Purifier library
+ Packaging of html purifier php shared libraries. 
+ These libs are installed into /usr/share/php/ and 
+ can be used from php directly.
+ http://htmlpurifier.org
