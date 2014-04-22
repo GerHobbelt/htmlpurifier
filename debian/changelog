@@ -1,4 +1,4 @@
-kronos-php-htmlpurifier (4.5.9) experimental; urgency=low
+kronos-php-htmlpurifier (4.6.0) experimental; urgency=low
 
   * repackage version 4.6.0 from master @2014-04-22 with blank email patch applied.
 
