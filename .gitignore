@@ -26,3 +26,10 @@ composer.lock
 *.orig
 *.bak
 core
+
+# ignore debian build specific files
+debian/files
+*.debhelper.log
+*.substvars
+debian/kronos-php-htmlpurifier/*
+
