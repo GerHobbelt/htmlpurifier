@@ -33,3 +33,5 @@ debian/files
 *.substvars
 debian/kronos-php-htmlpurifier/*
 
+node_modules
+npm-debug.log
