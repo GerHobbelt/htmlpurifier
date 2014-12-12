@@ -1,0 +1,23 @@
+{
+  "name": "htmlpurifier",
+  "version": "4.6.0-0",
+  "description": "",
+  "main": "false",
+  "scripts": {
+    "test": "false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kronostechnologies/htmlpurifier.git"
+  },
+  "author": "Kronos Technologies inc.",
+  "homepage": "https://github.com/kronostechnologies/htmlpurifier",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.15",
+    "grunt-conventional-changelog": "^1.1.0",
+    "grunt-git": "^0.2.14",
+    "grunt-kronos-release": "git://github.com/kronostechnologies/grunt-kronos-release.git",
+    "matchdep": "^0.3.0"
+  }
+}
